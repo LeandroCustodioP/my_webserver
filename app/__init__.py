@@ -5,5 +5,5 @@ def create_app():
     app.config.from_object('config.Config')
 
     with app.app_context():
-        from . import routes # importa rotas
+        from . import routes #importa rotas
         return app

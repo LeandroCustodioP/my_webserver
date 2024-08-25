@@ -1,8 +1,11 @@
-from flask import render_template
-from . import create_app
+from flask import current_app as app, render_template_string
 
-app = create_app()
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template_string("home.html")
+
+
+@app.route('/test')
+def test():
+    return "this is a test"
